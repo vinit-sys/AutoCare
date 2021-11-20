@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .container-main{
+            position:relative;
+        }
+        .login{
+            font-style: oblique;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            position:absolute;
+            width:30%;
+            height:70%;
+            top:20%;
+            right:5%;
+            color:#3ab549;
+            background:#fed501;
+            border-radius: 20% 20% 10% 10%;
+            border: 5px solid #3ab549;
+            display:none;
+        }
+        .container-inside{
+            font-style: oblique;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color:#3ab549;
+            background:#fed501;
+            width:30%;
+            height:70%;
+            position:absolute;
+            top:20%;
+            right:5%;
+            border-radius: 20% 20% 10% 10%;
+            border:5px solid #3ab549;
+        }
+        input{
+            background-color:#3ab549;
+            width:90%;
+            height:25px;
+            color:white;
+            padding:5px;
+            border-radius: 5px;
+            margin:2%;
+            border: none;
+        }
+        input::placeholder{
+            font-style: oblique;
+            color:white;
+        }
+        label{
+            margin:2%;
+            font-size: 15px;
+        }
+        input[type="submit"]{
+            margin-top: 10px;
+            font-style: oblique;
+            width:20%;
+            height:5%;
+            height:25px;
+            border:none;
+            background-color:#3ab549;
+            color:white;
+        }
+        .formd{
+            position:absolute;
+            width:80%;
+            height:auto;
+            left:10%;
+            bottom:5%;
+        }
+        .image-text{
+            position: absolute;
+            top:10%;
+            width:50%;
+            height:85%;
+            color:yellow;
+            text-align: center;
+            background-image: url("auto.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+        @media screen and (max-width:1150px){
+            .container-inside{
+                width:35%;
+            }
+            .login{
+                width:35%;
+            }
+        }
+        @media screen and (max-width:1050px){
+            .container-inside{
+                width:400px;
+            }
+            .login{
+                width:400px;
+            }
+            .image-text{
+                width:42%;
+            }
+        }
+        @media screen and (max-width:800px){
+            .container-inside{
+                background-color:white;
+                width:60%;
+                left:20%;
+                right:auto;
+            }
+            .login{
+                background-color:white;
+                width:60%;
+                left:20%;
+                right:auto;
+            }
+            input[type="submit"]{
+                width:100px;
+            }
+            .image-text{
+                width:100%;
+            }
+        }
+        @media screen and (max-width:500px){
+            .container-inside{
+                width:70%;
+                left:15%;
+                right:auto;
+            }
+            .login{
+                width:70%;
+                left:15%;
+                right:auto;
+            }
+            input[type="submit"]{
+                width:70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="containter-main">
+        <div class="image-text">
+        </div>
+        <div class="login" id="login">
+            <div class="text" style="position:absolute;top:10%;">
+                <h1 style="text-align: center;">Welcome to your destination ...</h1>
+                <h2 style="text-align:center">Enjoy the ride</h2>
+                <h2 style="text-align:center">Have a Good time</h2>
+            </div>
+            <div class="formd">
+                <form action="">
+                    <label for="user">Username</label><br/>
+                    <input type="text" placeholder="Enter username" name="user" required><br/>
+                    <label for="pass">Password</label><br/>
+                    <input type="password" name="pass" id="pass" placeholder="Enter the password" required><br/>
+                    <input type="submit" value="Login">
+    
+                    <a  onclick="getLogin()">Register here</a>
+                </form>
+            </div>
+        </div>
+        <div class="container-inside" id="signup">
+            <div class="text" style="position:absolute;top:10%;">
+                <h1 style="text-align: center;">Welcome to your destination ...</h1>
+            </div>
+            <div class="formd" id="Reg">
+                <form action="">
+                    <label for="user">Username</label><br/>
+                    <input type="text" placeholder="Enter username" name="user" required><br/>
+                    <label for="email">Email</label><br/>
+                    <input type="email" name="email" placeholder="Enter email" id="email" required><br/>
+                    <label for="pass">Password</label><br/>
+                    <input type="password" name="pass" id="pass" placeholder="Enter the password" required><br/>
+                    <label for="pass2">Re-Enter Password</label><br/>
+                    <input type="password" name="pass2" id="pass2" placeholder="Renter the password" required><br/>
+                    <input type="submit" value="Register">
+    
+                    <a onclick="getRegister()">Login here</a>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        var f=document.getElementById('login');
+        var c=document.getElementById('signup');
+        function getRegister(){
+            c.style.display="none";
+            f.style.display="block";
+        }
+        function getLogin(){
+            c.style.display="block";
+            f.style.display="none";
+        }
+    </script>
+</body>
+</html>
