@@ -56,9 +56,6 @@ input[type="submit"]{
     background-color:#3ab549;
     color:white;
 }
-#message{
-    display:none;
-}
 .formd{
     position:absolute;
     width:80%;
@@ -73,7 +70,7 @@ input[type="submit"]{
     height:85%;
     color:yellow;
     text-align: center;
-    background-image: url("images/auto.jpg");
+    background-image: url("/static/images/auto.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;

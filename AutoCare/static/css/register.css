@@ -56,9 +56,6 @@ input[type="submit"]{
     background-color:#3ab549;
     color:white;
 }
-#message{
-    display:none;
-}
 .formd{
     position:absolute;
     width:80%;

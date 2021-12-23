@@ -24,7 +24,7 @@
                     <label for="user">Username</label><br/>
                     <input type="text" placeholder="Enter username" name="username" required><br/>
                     <label for="pass">Password</label><br/>
-                    <input type="password" name="pass" id="pass" placeholder="Enter the password" required><br/>
+                    <input type="password" name="pass1" id="pass1" placeholder="Enter the password" required><br/>
                     <input type="submit" value="Login">
     
                     <a  onclick="getLogin()">Register here</a>
@@ -45,8 +45,8 @@
                     <label for="pass">Password</label><br/>
                     <input type="password" name="pass" id="pass" placeholder="Enter the password" required><br/>
                     <label for="pass2">Re-Enter Password</label><br/>
-                    <input type="password" name="pass2" id="pass2" placeholder="Renter the password" required><br/>
-                    <h4 id="message"></h4>
+                    <input type="password" name="pass2" id="pass2" placeholder="Renter the password" onkeyup="check();" required><br/>
+                    <span id="message"></span><br>
                     <input type="submit" onclick()="checkpass()"value="Register">
     
                     <a onclick="getRegister()">Login here</a>
@@ -55,7 +55,18 @@
         </div>
         
     </div>
-    
+    <script>
+        var check = function() {
+            if (document.getElementById('pass').value ==document.getElementById('pass2').value) {
+                document.getElementById('message').style.color="blue"
+                document.getElementById('message').innerHTML = "matching";
+            } 
+            else {
+                document.getElementById('message').style.color="red";
+                document.getElementById('message').innerHTML = "not matching";
+            }
+}
+    </script>
     <script src="{%static 'js/register.js'%}"></script>
 </body>
 </html>

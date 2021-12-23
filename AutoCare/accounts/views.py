@@ -7,8 +7,11 @@ def index(request):
 def login(request):
     if request.method=="POST":
         username=request.POST.get("username")
-        password=request.POST.get("pass")
+        password=request.POST.get("pass1")
+        print(username)
+        print(password)
         user=authenticate(username=username,password=password)
+        print(user)
         if user is not None:
             return HttpResponse("welocme")
         else:
