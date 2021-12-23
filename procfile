@@ -1,1 +1,1 @@
-web: gunicorn AutoCare.AutoCare.wsgi
+web: AutoCare.AutoCare.wsgi
